@@ -1,0 +1,18 @@
+
+.main-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-side-list {
+    margin-top: 10px;
+    border-right: double;
+    height: 100vh;
+}
+
+.right-side-list {
+    margin-top: 10px;
+    border-left: double;
+    height: 100vh;
+}
+
