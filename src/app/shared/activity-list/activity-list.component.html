@@ -1,0 +1,7 @@
+<h2>Recent Activities <span class="badge badge-secondary">New</span></h2>
+        
+<ul class="nav flex-column" *ngFor="let new of activities">
+    <li class="nav-item">
+        <a class="nav-link active" style="cursor: pointer;">{{ new.title }}</a>
+      </li>
+  </ul>

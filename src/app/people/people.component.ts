@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PeopleService } from 'src/services/people.service';
 
 @Component({
   selector: 'app-people',
@@ -6,21 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./people.component.css']
 })
 export class PeopleComponent implements OnInit {
-
-  public people = [
-    {name: 'Mamed Ahmedov'},
-    {name: 'Kamil Memmedov'},
-    {name: 'Zinyet Mahir'},
-    {name: 'Konul Muradova'},
-    {name: 'Mamed Ahmedov'},
-    {name: 'Kamil Memmedov'},
-    {name: 'Zinyet Mahir'},
-    {name: 'Konul Muradova'},
-    {name: 'Mamed Ahmedov'},
-    {name: 'Kamil Memmedov'},
-    {name: 'Zinyet Mahir'},
-    {name: 'Konul Muradova'},
-  ]
 
   public activity = [
     {title: 'New Person added'},
@@ -32,9 +18,14 @@ export class PeopleComponent implements OnInit {
     {title: 'Place XX modified'},
   ]
 
-  constructor() { }
+  people = []
 
-  ngOnInit(): void {
+  constructor ( private peopleService: PeopleService) {
+      
+   }
+
+  ngOnInit() {
+    this.people = this.peopleService.getPersons();
   }
 
 }

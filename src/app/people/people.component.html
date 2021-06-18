@@ -7,16 +7,12 @@
               <button class="btn btn-outline-secondary" type="button">Search</button>
             </div>
           </div>
-        
-        <ul class="nav flex-column" *ngFor="let person of people">
-            <li class="nav-item">
-                <a class="nav-link active" >{{ person.name }}</a>
-              </li>
-          </ul>
-        
+        <app-assest-list></app-assest-list>
     </div>
 
     <div class="col-sm-8 float-container" style="margin-top: 10px;">
+
+      <!-- <button type="button" class="btn btn-primary bouton-image monBouton"></button> -->
 
       <div *ngFor="let person of people">
 
@@ -25,7 +21,7 @@
           <div class="card-body">
             <h5 class="card-title">{{ person.name }}</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">More Details</a>
+            <a routerLink="person" class="btn btn-primary">More Details</a>
           </div>
         </div>
 
@@ -36,13 +32,7 @@
 
     <div class="col-sm-2 right-side-list">
 
-          <h2>Recent Activities <span class="badge badge-secondary">New</span></h2>
-        
-        <ul class="nav flex-column" *ngFor="let new of activity">
-            <li class="nav-item">
-                <a class="nav-link active" >{{ new.title }}</a>
-              </li>
-          </ul>
+      <app-activity-list></app-activity-list>
         
     </div>
 

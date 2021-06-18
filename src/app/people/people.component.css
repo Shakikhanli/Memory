@@ -6,19 +6,18 @@
 
 .left-side-list {
     margin-top: 10px;
-    border-right: double;
     height: 100vh;
 }
 
 .right-side-list {
     margin-top: 10px;
-    border-left: double;
     height: 100vh;
 }
 
 
 .float-container {
-    border: 3px solid #fff;
+    border-right: double;
+    border-left: double;
     padding: 20px;
 }
 
@@ -29,3 +28,19 @@
     margin-right: 5px;
     margin-top: 5px;
 } 
+
+.bouton-image:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    background-color: transparent;
+    background-position : center center;
+    background-repeat:no-repeat;
+}
+
+.monBouton:before{
+    background-image : url("../../assets/images/profile.PNG");
+}
