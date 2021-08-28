@@ -1,3 +1,8 @@
+import { AboutComponent } from './about/about.component';
+import { StatisticsComponent } from './statistics/statistics.component';
+import { GamesComponent } from './games/games.component';
+import { BooksComponent } from './books/books.component';
+import { PlacesComponent } from './places/places.component';
 // import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -16,7 +21,12 @@ const routes: Routes = [
       component:  PersonComponent
       }
     ]
-  }
+  },
+  { path: 'places', component: PlacesComponent },
+  { path: 'books', component: BooksComponent},
+  { path: 'games', component: GamesComponent},
+  { path: 'statistics', component: StatisticsComponent},
+  { path: 'about', component: AboutComponent}
 
 ];
 
